@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Welcome, <%= firstName %>!</h1>
+    <p>Your upcoming appointments:</p>
+    <ul>
+        <% appointments.forEach(appointment => { %>
+            <li>
+                <strong>Doctor:</strong> <%= appointment.doctor_name %><br>
+                <strong>Date:</strong> <%= appointment.date %><br>
+                <strong>Time:</strong> <%= appointment.time %>
+            </li>
+        <% }); %>
+    </ul>
+    <a href="/logout">Logout</a>
+</body>
+</html>
